@@ -21,7 +21,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="container mx-auto px-4 py-8">
       <h2>Iniciar Sesión</h2>
       <form onSubmit={handleSubmit}>
         <input type="email" placeholder="Correo electrónico" value={email} onChange={(e) => setEmail(e.target.value)} />
