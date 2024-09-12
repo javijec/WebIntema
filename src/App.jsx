@@ -6,7 +6,8 @@ import HeroSection from "./components/HeroSection";
 import NewsEventsSection from "./components/NewsEventsSection";
 import DiscoverSection from "./components/DiscoverSection";
 import Footer from "./components/Footer";
-import NewsPage from "./pages/NewsPage";
+import NewsPage from "./components/NewsPage";
+import Admin from "./components/Admin";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
             }
           />
           <Route path="/news" element={<NewsPage />} />
+          <Route path="/Admin" element={<Admin />} />
         </Routes>
         <Footer />
       </div>
