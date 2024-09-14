@@ -11,6 +11,7 @@ import Admin from "./components/Admin";
 import PrivateRoute from "./components/PrivateRoute";
 import { AuthProvider } from "./context/AuthContext";
 import Login from "./components/Login"; // Importa el componente Login
+import News from "./components/News";
 
 export default function App() {
   return (
@@ -31,12 +32,11 @@ export default function App() {
               }
             />
             <Route path="/news" element={<NewsPage />} />
+            <Route path="/news/:id" element={<News />} />
             {/* Ruta de inicio de sesión */}
             <Route path="/login" element={<Login />} />
             {/* Rutas protegidas */}
-            <Route element={<PrivateRoute />}>
-              <Route path="/admin" element={<Admin />} />
-            </Route>
+            <Route element={<PrivateRoute />}> <Route path="/admin" element={<Admin />} /> </Route>
           </Routes>
           <Footer />
         </div>
